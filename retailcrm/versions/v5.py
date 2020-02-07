@@ -488,7 +488,7 @@ class Client(Base):
         if site is not None:
             self.parameters['site'] = site
 
-        if uid_type != 'externalId':
+        if uid_type != 'id':
             self.parameters['by'] = uid_type
 
         return self.post('/orders/payments/' + str(payment[uid_type]) + '/edit')
@@ -907,7 +907,7 @@ class Client(Base):
         """
         if site is not None:
             self.parameters['site'] = site
-        
+
         self.parameters['offers'] = json.dumps(offers)
 
 
