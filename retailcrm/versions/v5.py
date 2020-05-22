@@ -388,7 +388,7 @@ class Client(Base):
         """
         self.parameters['integrationModule'] = json.dumps(configuration)
 
-        return self.post('/integration-modules/' + str(configuration['code'])) + '/edit'
+        return self.post('/integration-modules/' + str(configuration['code'])  + '/edit')
 
     def orders(self, filters=None, limit=20, page=1):
         """
