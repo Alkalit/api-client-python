@@ -1086,3 +1086,8 @@ class Client(Base):
         self.parameters['createInvoice'] = json.dumps(createInvoice)
 
         return self.post('/payment/create-invoice')
+
+    def payment_update_invoice(self, updateInvoice: dict):
+        self.parameters['updateInvoice'] = json.dumps(updateInvoice)
+
+        return self.post('/payment/update-invoice')
