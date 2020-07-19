@@ -19,7 +19,7 @@ class Base(object):
         self.api_version = version
         self.parameters = {}
 
-    def get(self, url, version=True):
+    def get(self, url, version=True) -> Response:
         """
         Get request
         :param url: string
@@ -33,7 +33,7 @@ class Base(object):
 
         return Response(response.status_code, response.json())
 
-    def post(self, url, version=True):
+    def post(self, url, version=True) -> Response:
         """
         Post request
         :return: Response
