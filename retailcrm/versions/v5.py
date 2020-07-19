@@ -1076,3 +1076,8 @@ class Client(Base):
         self.parameters['status'] = status
 
         return self.post('/users/' + str(uid) + '/status')
+
+    def payment_check(self, check: dict):
+        self.parameters['check'] = json.dumps(check)
+
+        return self.post('/payment/check')
