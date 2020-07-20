@@ -476,7 +476,7 @@ class Client(Base):
 
         return self.post('/orders/payments/' + str(uid) + '/delete')
 
-    def order_payment_edit(self, payment, uid_type='id', site=None):
+    def order_payment_edit(self, payment, uid_type='externalId', site=None):
         """
         :param payment: object
         :param uid_type: string
